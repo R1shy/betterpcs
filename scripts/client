@@ -1,0 +1,3 @@
+#!/bin/bash
+clear
+__GLX_VENDOR_LIBRARY_NAME=mesa gradle runClient

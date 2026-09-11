@@ -1,0 +1,136 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 2026-09-10 21:22:21
+Description: Bootstrap
+
+net.neoforged.fml.ModLoadingException: Loading errors encountered:
+	- Better PCs (betterpcs) has failed to load correctly
+	  java.lang.IllegalArgumentException: Listener for event class net.neoforged.neoforge.client.event.RegisterMenuScreensEvent takes an argument that is not valid for this bus
+
+	at net.neoforged.fml.ModLoader.waitForFuture(ModLoader.java:253) ~[loader-11.0.16.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.dispatchParallelTask(ModLoader.java:216) ~[loader-11.0.16.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.constructMods(ModLoader.java:124) ~[loader-11.0.16.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:101) ~[loader-11.0.16.jar:11.0] {}
+	at TRANSFORMER/neoforge@26.2.0.83/net.neoforged.neoforge.internal.CommonModLoader.begin(CommonModLoader.java:49) ~[neoforge-26.2.0.83-universal.jar:?] {}
+	at TRANSFORMER/neoforge@26.2.0.83/net.neoforged.neoforge.client.loading.ClientModLoader.begin(ClientModLoader.java:56) ~[neoforge-26.2.0.83-universal.jar:?] {}
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:167) [minecraft-patched-26.2.0.83.jar:?] {}
+	at net.neoforged.fml.startup.Client.main(Client.java:19) [loader-11.0.16.jar:11.0] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: main
+Stacktrace:
+	at net.neoforged.fml.ModLoader.waitForFuture(ModLoader.java:253) ~[loader-11.0.16.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.dispatchParallelTask(ModLoader.java:216) ~[loader-11.0.16.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.constructMods(ModLoader.java:124) ~[loader-11.0.16.jar:11.0] {}
+	at net.neoforged.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:101) ~[loader-11.0.16.jar:11.0] {}
+	at TRANSFORMER/neoforge@26.2.0.83/net.neoforged.neoforge.internal.CommonModLoader.begin(CommonModLoader.java:49) ~[neoforge-26.2.0.83-universal.jar:?] {}
+	at TRANSFORMER/neoforge@26.2.0.83/net.neoforged.neoforge.client.loading.ClientModLoader.begin(ClientModLoader.java:56) ~[neoforge-26.2.0.83-universal.jar:?] {}
+-- Initialization --
+Details:
+	Modules: 
+Stacktrace:
+	at TRANSFORMER/minecraft@26.2/net.minecraft.client.main.Main.main(Main.java:167) [minecraft-patched-26.2.0.83.jar:?] {}
+	at net.neoforged.fml.startup.Client.main(Client.java:19) [loader-11.0.16.jar:11.0] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 26.2
+	Minecraft Version ID: 26.2
+	Operating System: Linux (amd64) version 7.2.4-arch1-2
+	Java Version: 25.0.4.1, Arch Linux
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Arch Linux
+	Memory: 44286944 bytes (42 MiB) / 356515840 bytes (340 MiB) up to 4074766336 bytes (3886 MiB)
+	Memory (heap): init: 244MiB, used: 295MiB, committed: 340MiB, max: 3886MiB
+	Memory (non-head): init: 007MiB, used: 117MiB, committed: 119MiB, max: 000MiB
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 8400F 6-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 117 Stepping 2
+	Microarchitecture: Zen 3
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: GB205 [GeForce RTX 5070]
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MiB): 16416.00
+	Graphics card #0 deviceId: 0x2f04
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 11864.07
+	Virtual memory used (MiB): 7652.54
+	Swap memory total (MiB): 4096.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 7705.91, total: 7768.07
+	Space in storage for workdir (MiB): available: 682496.06, total: 936786.06
+	Operating System Version: GNU/Linux Arch Linux unknown (unknown) build 7.2.4-arch1-2
+	Process Elevated: false
+	Process Loads: Uptime: 5s, user: 14s (309.67%), kernel: 0s (7.21%), total: 15s (316.88%)
+	Process Virtual Size (MiB): 6391.68
+	Process Resident Size (MiB): 657.88
+	JVM Flags: 0 total; 
+	Debug Flags: 0 total; 
+	Launched Version: 26.2.0.83
+	Backend library: LWJGL version 3.4.1+2
+	Window size: <not initialized>
+	Surface Info: <no surface>
+	GFLW Platform: null
+	Graphics Device: <none>
+	GL debug messages: <no renderer available>
+	Is Modded: Definitely; Client brand changed to 'neoforge'
+	Universe: 404
+	Type: Client
+	Locale: en_US
+	System encoding: UTF-8
+	File encoding: UTF-8
+	CPU: 12x AMD Ryzen 5 8400F 6-Core Processor
+	Class Processors: 
+		00.00%: neoforge:neoforge_dev_dist_cleaner
+		00.00%: neoforge:computing_frames (marker)
+		00.00%: neoforge:runtime_enum_extender
+		04.37%: neoforge:access_transformer
+		00.08%: neoforge:mixin
+		00.00%: neoforge:simple_processors_default (marker)
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.biome.biome
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.block.flowerpotblock
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.levelgen.structure.structure
+		00.36%: neoforge.coremods:method_redirector
+	Mod List: 
+		main                                              |Better PCs                    |betterpcs                     |0.0.1               |Manifest: NOSIGNATURE
+		minecraft-patched-26.2.0.83.jar                   |Minecraft                     |minecraft                     |26.2                |Manifest: NOSIGNATURE
+		neoforge-26.2.0.83-universal.jar                  |NeoForge                      |neoforge                      |26.2.0.83           |Manifest: NOSIGNATURE
+	Crash Report UUID: 81466386-b72e-45fe-a914-60a91e34960e
+	FML: 11.0.16
+	NeoForge: 26.2.0.83
+	Class Processors: 
+		00.00%: neoforge:neoforge_dev_dist_cleaner
+		00.00%: neoforge:computing_frames (marker)
+		00.00%: neoforge:runtime_enum_extender
+		04.37%: neoforge:access_transformer
+		00.08%: neoforge:mixin
+		00.00%: neoforge:simple_processors_default (marker)
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.biome.biome
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.block.flowerpotblock
+		00.02%: neoforge.coremods:field_to_getter.net.minecraft.world.level.levelgen.structure.structure
+		00.36%: neoforge.coremods:method_redirector
+	Mod List: 
+		main                                              |Better PCs                    |betterpcs                     |0.0.1               |Manifest: NOSIGNATURE
+		minecraft-patched-26.2.0.83.jar                   |Minecraft                     |minecraft                     |26.2                |Manifest: NOSIGNATURE
+		neoforge-26.2.0.83-universal.jar                  |NeoForge                      |neoforge                      |26.2.0.83           |Manifest: NOSIGNATURE
+	Crash Report UUID: 475d2436-391c-45b8-b4ed-c84372bbce9c
+	FML: 11.0.16
+	NeoForge: 26.2.0.83
