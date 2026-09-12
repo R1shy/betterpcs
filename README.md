@@ -15,13 +15,13 @@ The hardest part to set up about this mod will undoubtedly be Docker, but it is 
  Install [Docker Desktop](https://docs.docker.com/desktop/setup/install/mac-install/#install-interactively)\
  Technically, Podman works too, but you're on your own for setting it up
  ## Linux:
- Install Docker from your package manager and start the service:
- For Arch and any derivative, it would be:
+ Install Docker from your package manager and start the service:\
+ For Arch and any derivative, it would be
  ```bash
  sudo pacman -S docker
  sudo systemctl enable --now docker
  ```
- then your done
+ Then you're done
 
 # How to use in game
  TODO: add this section
